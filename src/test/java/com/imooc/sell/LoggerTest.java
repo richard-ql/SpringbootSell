@@ -17,7 +17,7 @@ public class LoggerTest {
         String name = "imooc";
         String password = "123456";
         log.debug("debug...");
-        log.info("name: {}, password: {}, info...", name, password);
-        log.error("error...");
+        log.info("info...  name: {}, password: {}", name, password);
+        log.error("error...  name: {}, password: {}", name, password);
     }
 }
