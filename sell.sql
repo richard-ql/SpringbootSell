@@ -5,9 +5,10 @@ create table product_info(
     product_stock int not null,
     product_description varchar(64),
     product_icon varchar(512),
+    product_status tinyint(3) default '0',
     category_type int not null,
     create_time timestamp not null default current_timestamp(),
-    update_time timestamp not null default current_timestamp() on update current_timestamp(),
+    update_time timestamp not null default current_timestamp(),
     constraint product_info_pk
         primary key (product_id)
 );
@@ -16,6 +17,7 @@ comment on column product_info.product_name is '商品名称';
 comment on column product_info.product_price is '商品单价';
 comment on column product_info.product_stock is '库存';
 comment on column product_info.product_description is '商品描述';
+comment on column product_info.product_status is '商品状态,0正常1下架';
 comment on column product_info.product_icon is '小图';
 comment on column product_info.category_type is '类目编号';
 comment on column product_info.create_time is '创建时间';
@@ -26,7 +28,7 @@ create table product_category (
     category_name varchar(64) not null,
     category_type int not null,
     create_time timestamp not null default current_timestamp(),
-    update_time timestamp not null default current_timestamp() on update current_timestamp(),
+    update_time timestamp not null default current_timestamp(),
     constraint product_category_pk
         primary key (category_id)
 
@@ -50,7 +52,7 @@ create table order_master (
     order_status smallint (3) not null default '0',
     pay_status smallint (3) not null default '0',
     create_time timestamp not null default current_timestamp(),
-    update_time timestamp not null default current_timestamp() on update current_timestamp(),
+    update_time timestamp not null default current_timestamp(),
     constraint order_master_pk
         primary key (order_id)
 
@@ -79,7 +81,7 @@ create table order_detail (
     product_quantity int not null,
     product_icon varchar(512) not null,
     create_time timestamp not null default current_timestamp(),
-    update_time timestamp not null default current_timestamp() on update current_timestamp(),
+    update_time timestamp not null default current_timestamp(),
     constraint order_detail_pk
         primary key (detail_id),
 );

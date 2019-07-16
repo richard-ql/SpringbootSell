@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: org.h2.Driver
-    url: ~/sell
+    url: jdbc:h2:file:C:\Users\issuser\IdeaProjects\SpringbootSell\sell
     username: root
     password: 123456
   jpa:
