@@ -22,8 +22,9 @@ public class ProductCategoryRepositoryTest {
     @Test
     public void saveTest() {
         ProductCategory productCategory = new ProductCategory();
-        productCategory.setCategoryName("今日头条3");
-        productCategory.setCategoryType(3);
+        productCategory.setCategoryId(2);
+        productCategory.setCategoryName("今日头条2");
+        productCategory.setCategoryType(1);
         repository.save(productCategory);
     }
 
@@ -35,7 +36,7 @@ public class ProductCategoryRepositoryTest {
 
     @Test
     public void findByCategoryTypeInTest() {
-        List<Integer> list = Arrays.asList(3);
+        List<Integer> list = Arrays.asList(1, 2);
         List<ProductCategory> result = repository.findByCategoryTypeIn(list);
         Assert.assertNotEquals(0, result.size());
     }
