@@ -14,6 +14,7 @@ VirtualBox-5.1.22
 
 ##### nginx
 * 路径 /usr/local/nginx
+* 配置 /usr/local/nginx/conf/nginx.conf
 * 启动 nginx
 * 重启 nginx -s reload
 
@@ -38,4 +39,7 @@ VirtualBox-5.1.22
 * 启动 systemctl start tomcat
 * 停止 systemctl stop tomcat
 
-
+##### 修改windows host 文件
+* 路径 C:\Windows\System32\drivers\etc\hosts
+* 添加 192.168.137.99 sell.com
+* 生效host  ipconfig /flushdns
