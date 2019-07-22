@@ -22,7 +22,7 @@ public class OrderMasterRepositoryTest {
     @Autowired
     private OrderMasterRepository repository;
 
-    private final String OPENID = "100101";
+    private final String OPENID = "ew3euwhd7sjw9diwkq";
 
     @Test
     public void saveTest() {
